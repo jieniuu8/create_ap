@@ -1839,6 +1839,11 @@ else
     echo "No Internet sharing"
 fi
 
+# USER CONFIG
+# Prevent service dead upon reboot
+sleep 15
+########
+
 # start dhcp + dns (optional)
 if [[ "$SHARE_METHOD" != "bridge" ]]; then
     if [[ $NO_DNS -eq 0 ]]; then
